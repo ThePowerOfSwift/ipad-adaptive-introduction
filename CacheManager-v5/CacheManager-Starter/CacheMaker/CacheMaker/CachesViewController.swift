@@ -123,26 +123,52 @@ extension CachesViewController: UICollectionViewDropDelegate {
         // 1. Gets the data source for the collection view.
         let dataSource = dataSourceForCollectionView(collectionView)
         // 2. Sets the end of the collection view as the item drop destination.
-        let destinationIndexPath = IndexPath(item: collectionView.numberOfItems(inSection: 0), section: 0)
+        let destinationIndexPath: IndexPath
+        if let indexPath = coordinator.destinationIndexPath {
+            destinationIndexPath = indexPath
+        } else {
+            destinationIndexPath = IndexPath(item: collectionView.numberOfItems(inSection: 0), section: 0)
+        }
         // 3. Selects the first drag item.
         let item = coordinator.items[0]
         // 4. Checks how you propose to handle the drop.
         switch coordinator.proposal.operation {
         case .copy:
-            print("copy operation...")
-            let itemProvider = item.dragItem.itemProvider
-            // 5. Asynchronously fetchs the dragged item's data.
-            itemProvider.loadObject(ofClass: NSString.self) { (string, error) in
-                if let string = string as? String {
-                    // 6. Creates a new geocache with a name based on the incoming string data.
-                    let geocache = Geocache(name: string, summary: "Unknown", latitude: 0.0, longitude: 0.0)
-                    // 7. Adds the new geocache to the data source.
-                    dataSource.addGeocache(geocache, at: destinationIndexPath.item)
-                    // 8. Inserts the new item in the collection view. You invoke this on the main thread since the data fetching completion block runs on an internal queue.
-                    DispatchQueue.main.async {
-                        collectionView.insertItems(at: [destinationIndexPath])
+            if let geocache = item.dragItem.localObject as? Geocache {
+                print("copy from same app...")
+                dataSource.addGeocache(geocache, at: destinationIndexPath.item)
+                DispatchQueue.main.async {
+                    collectionView.insertItems(at: [destinationIndexPath])
+                }
+            } else {
+                print("copy from different app...")
+                let itemProvider = item.dragItem.itemProvider
+                // 5. Asynchronously fetchs the dragged item's data.
+                itemProvider.loadObject(ofClass: NSString.self) { (string, error) in
+                    if let string = string as? String {
+                        // 6. Creates a new geocache with a name based on the incoming string data.
+                        let geocache = Geocache(name: string, summary: "Unknown", latitude: 0.0, longitude: 0.0)
+                        // 7. Adds the new geocache to the data source.
+                        dataSource.addGeocache(geocache, at: destinationIndexPath.item)
+                        // 8. Inserts the new item in the collection view. You invoke this on the main thread since the data fetching completion block runs on an internal queue.
+                        DispatchQueue.main.async {
+                            collectionView.insertItems(at: [destinationIndexPath])
+                        }
                     }
                 }
+            }
+        case .move:
+            print("moving...")
+            // 1. Gets the source index path which you should have access to for drag and drops within the same collection view.
+            if let sourceIndexPath = item.sourceIndexPath {
+                // 2. Performs batch updates to move the geocache in the data source and collection view.
+                collectionView.performBatchUpdates({
+                    dataSource.moveGeoCache(at: sourceIndexPath.item, to: destinationIndexPath.item)
+                    collectionView.deleteItems(at: [sourceIndexPath])
+                    collectionView.insertItems(at: [destinationIndexPath])
+                })
+                // 3. Animates the insertion of the dragged geocache in the collection view.
+                coordinator.drop(item.dragItem, toItemAt: destinationIndexPath)
             }
         default: return
         }

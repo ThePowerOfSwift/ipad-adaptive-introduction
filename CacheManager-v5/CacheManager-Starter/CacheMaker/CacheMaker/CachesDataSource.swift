@@ -68,6 +68,7 @@ extension CachesDataSource {
         let geocache = geocaches[indexPath.item]
         let itemProvider = NSItemProvider(object: geocache.name as NSString)
         let dragItem = UIDragItem(itemProvider: itemProvider)
+        dragItem.localObject = geocache
         return [dragItem]
     }
     
