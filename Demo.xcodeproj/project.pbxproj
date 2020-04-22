@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89EA8B6B2450736F00A329FA /* CacheDragCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA8B6A2450736F00A329FA /* CacheDragCoordinator.swift */; };
 		C4C04C2B24504D3B00D93280 /* DDDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C04C2A24504D3B00D93280 /* DDDemoViewController.swift */; };
 		C4C04C2D24504F4200D93280 /* DDDemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C04C2C24504F4200D93280 /* DDDemoTableViewCell.swift */; };
 		C4C04C2F2450525700D93280 /* DDDemoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C04C2E2450525700D93280 /* DDDemoDataSource.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		89EA8B6A2450736F00A329FA /* CacheDragCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheDragCoordinator.swift; sourceTree = "<group>"; };
 		C4C04C2A24504D3B00D93280 /* DDDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDDemoViewController.swift; sourceTree = "<group>"; };
 		C4C04C2C24504F4200D93280 /* DDDemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDDemoTableViewCell.swift; sourceTree = "<group>"; };
 		C4C04C2E2450525700D93280 /* DDDemoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDDemoDataSource.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				C4D247A9244DA89D00D75F84 /* SceneDelegate.swift */,
 				C4D247AB244DA89D00D75F84 /* ViewController.swift */,
 				C4C04C2A24504D3B00D93280 /* DDDemoViewController.swift */,
+				89EA8B6A2450736F00A329FA /* CacheDragCoordinator.swift */,
 				C4C04C2E2450525700D93280 /* DDDemoDataSource.swift */,
 				C4C04C30245053DB00D93280 /* Geo.swift */,
 				C4C04C2C24504F4200D93280 /* DDDemoTableViewCell.swift */,
@@ -153,6 +156,7 @@
 				C4D247AC244DA89D00D75F84 /* ViewController.swift in Sources */,
 				C4C04C2D24504F4200D93280 /* DDDemoTableViewCell.swift in Sources */,
 				C4C04C2B24504D3B00D93280 /* DDDemoViewController.swift in Sources */,
+				89EA8B6B2450736F00A329FA /* CacheDragCoordinator.swift in Sources */,
 				C4C04C2F2450525700D93280 /* DDDemoDataSource.swift in Sources */,
 				C4D247A8244DA89D00D75F84 /* AppDelegate.swift in Sources */,
 				C4D247AA244DA89D00D75F84 /* SceneDelegate.swift in Sources */,

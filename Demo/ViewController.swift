@@ -8,13 +8,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath {
+        case [0, 0]:
+            performSegue(withIdentifier: "UIAdaptiveSegue", sender: nil)
+        case [0, 1]:
+            performSegue(withIdentifier: "DragAndDropSegue", sender: nil)
+        default:
+            break
+        }
+    }
 }
 
