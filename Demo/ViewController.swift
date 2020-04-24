@@ -21,6 +21,8 @@ class ViewController: UITableViewController {
             performSegue(withIdentifier: "UIAdaptiveSegue", sender: nil)
         case [0, 1]:
             performSegue(withIdentifier: "DragAndDropSegue", sender: nil)
+        case [0, 3]:
+            performSegue(withIdentifier: "SplitViewControllerSegue", sender: nil)
         default:
             break
         }

@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		89EA8B6B2450736F00A329FA /* CacheDragCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA8B6A2450736F00A329FA /* CacheDragCoordinator.swift */; };
-		C4C04C2B24504D3B00D93280 /* DDDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C04C2A24504D3B00D93280 /* DDDemoViewController.swift */; };
-		C4C04C2D24504F4200D93280 /* DDDemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C04C2C24504F4200D93280 /* DDDemoTableViewCell.swift */; };
-		C4C04C2F2450525700D93280 /* DDDemoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C04C2E2450525700D93280 /* DDDemoDataSource.swift */; };
-		C4C04C31245053DB00D93280 /* Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C04C30245053DB00D93280 /* Geo.swift */; };
+		C4C04C7B2452953300D93280 /* DDDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C04C752452953300D93280 /* DDDemoViewController.swift */; };
+		C4C04C7C2452953300D93280 /* DDDemoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C04C762452953300D93280 /* DDDemoDataSource.swift */; };
+		C4C04C7D2452953300D93280 /* CacheDragCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C04C772452953300D93280 /* CacheDragCoordinator.swift */; };
+		C4C04C7E2452953300D93280 /* DDDemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C04C782452953300D93280 /* DDDemoTableViewCell.swift */; };
+		C4C04C7F2452953300D93280 /* Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C04C792452953300D93280 /* Geo.swift */; };
+		C4C04C812452954900D93280 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C04C802452954900D93280 /* MasterViewController.swift */; };
+		C4C04C832452961D00D93280 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C04C822452961D00D93280 /* DetailViewController.swift */; };
+		C4C04C852452AD6500D93280 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C04C842452AD6500D93280 /* Monster.swift */; };
+		C4C04C892452D7A300D93280 /* DemoSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C04C882452D7A200D93280 /* DemoSplitViewController.swift */; };
 		C4D247A8244DA89D00D75F84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D247A7244DA89D00D75F84 /* AppDelegate.swift */; };
 		C4D247AA244DA89D00D75F84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D247A9244DA89D00D75F84 /* SceneDelegate.swift */; };
 		C4D247AC244DA89D00D75F84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D247AB244DA89D00D75F84 /* ViewController.swift */; };
@@ -21,11 +25,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		89EA8B6A2450736F00A329FA /* CacheDragCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheDragCoordinator.swift; sourceTree = "<group>"; };
-		C4C04C2A24504D3B00D93280 /* DDDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDDemoViewController.swift; sourceTree = "<group>"; };
-		C4C04C2C24504F4200D93280 /* DDDemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDDemoTableViewCell.swift; sourceTree = "<group>"; };
-		C4C04C2E2450525700D93280 /* DDDemoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDDemoDataSource.swift; sourceTree = "<group>"; };
-		C4C04C30245053DB00D93280 /* Geo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geo.swift; sourceTree = "<group>"; };
+		C4C04C752452953300D93280 /* DDDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDDemoViewController.swift; sourceTree = "<group>"; };
+		C4C04C762452953300D93280 /* DDDemoDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDDemoDataSource.swift; sourceTree = "<group>"; };
+		C4C04C772452953300D93280 /* CacheDragCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheDragCoordinator.swift; sourceTree = "<group>"; };
+		C4C04C782452953300D93280 /* DDDemoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDDemoTableViewCell.swift; sourceTree = "<group>"; };
+		C4C04C792452953300D93280 /* Geo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geo.swift; sourceTree = "<group>"; };
+		C4C04C802452954900D93280 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		C4C04C822452961D00D93280 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C4C04C842452AD6500D93280 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
+		C4C04C882452D7A200D93280 /* DemoSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSplitViewController.swift; sourceTree = "<group>"; };
 		C4D247A4244DA89D00D75F84 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D247A7244DA89D00D75F84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4D247A9244DA89D00D75F84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +55,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C4C04C742452953300D93280 /* DragAndDrop */ = {
+			isa = PBXGroup;
+			children = (
+				C4C04C752452953300D93280 /* DDDemoViewController.swift */,
+				C4C04C762452953300D93280 /* DDDemoDataSource.swift */,
+				C4C04C772452953300D93280 /* CacheDragCoordinator.swift */,
+				C4C04C782452953300D93280 /* DDDemoTableViewCell.swift */,
+				C4C04C792452953300D93280 /* Geo.swift */,
+			);
+			path = DragAndDrop;
+			sourceTree = "<group>";
+		};
+		C4C04C7A2452953300D93280 /* SplitViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C4C04C802452954900D93280 /* MasterViewController.swift */,
+				C4C04C822452961D00D93280 /* DetailViewController.swift */,
+				C4C04C842452AD6500D93280 /* Monster.swift */,
+				C4C04C882452D7A200D93280 /* DemoSplitViewController.swift */,
+			);
+			path = SplitViewController;
+			sourceTree = "<group>";
+		};
 		C4D2479B244DA89D00D75F84 = {
 			isa = PBXGroup;
 			children = (
@@ -69,11 +100,8 @@
 				C4D247A7244DA89D00D75F84 /* AppDelegate.swift */,
 				C4D247A9244DA89D00D75F84 /* SceneDelegate.swift */,
 				C4D247AB244DA89D00D75F84 /* ViewController.swift */,
-				C4C04C2A24504D3B00D93280 /* DDDemoViewController.swift */,
-				89EA8B6A2450736F00A329FA /* CacheDragCoordinator.swift */,
-				C4C04C2E2450525700D93280 /* DDDemoDataSource.swift */,
-				C4C04C30245053DB00D93280 /* Geo.swift */,
-				C4C04C2C24504F4200D93280 /* DDDemoTableViewCell.swift */,
+				C4C04C742452953300D93280 /* DragAndDrop */,
+				C4C04C7A2452953300D93280 /* SplitViewController */,
 				C4D247AD244DA89D00D75F84 /* Main.storyboard */,
 				C4D247B0244DA89E00D75F84 /* Assets.xcassets */,
 				C4D247B2244DA89E00D75F84 /* LaunchScreen.storyboard */,
@@ -153,14 +181,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4C04C892452D7A300D93280 /* DemoSplitViewController.swift in Sources */,
+				C4C04C7E2452953300D93280 /* DDDemoTableViewCell.swift in Sources */,
 				C4D247AC244DA89D00D75F84 /* ViewController.swift in Sources */,
-				C4C04C2D24504F4200D93280 /* DDDemoTableViewCell.swift in Sources */,
-				C4C04C2B24504D3B00D93280 /* DDDemoViewController.swift in Sources */,
-				89EA8B6B2450736F00A329FA /* CacheDragCoordinator.swift in Sources */,
-				C4C04C2F2450525700D93280 /* DDDemoDataSource.swift in Sources */,
+				C4C04C7C2452953300D93280 /* DDDemoDataSource.swift in Sources */,
+				C4C04C7F2452953300D93280 /* Geo.swift in Sources */,
 				C4D247A8244DA89D00D75F84 /* AppDelegate.swift in Sources */,
+				C4C04C812452954900D93280 /* MasterViewController.swift in Sources */,
+				C4C04C7B2452953300D93280 /* DDDemoViewController.swift in Sources */,
+				C4C04C852452AD6500D93280 /* Monster.swift in Sources */,
+				C4C04C832452961D00D93280 /* DetailViewController.swift in Sources */,
 				C4D247AA244DA89D00D75F84 /* SceneDelegate.swift in Sources */,
-				C4C04C31245053DB00D93280 /* Geo.swift in Sources */,
+				C4C04C7D2452953300D93280 /* CacheDragCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
