@@ -8,11 +8,26 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class ViewController: UITableViewController, DataModelControllerObserver {
+    
+    var dataModelController = DataModelController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        if dataModelController.drawings.isEmpty {
+            dataModelController.newDrawing()
+        }
+        
+        dataModelController.thumbnailTraitCollection = traitCollection
+        
+        dataModelController.observers.append(self)
+        
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        dataModelController.thumbnailTraitCollection = traitCollection
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -21,11 +36,28 @@ class ViewController: UITableViewController {
             performSegue(withIdentifier: "UIAdaptiveSegue", sender: nil)
         case [0, 1]:
             performSegue(withIdentifier: "DragAndDropSegue", sender: nil)
+        case [0, 2]:
+            performSegue(withIdentifier: "DrawingSegue", sender: nil)
         case [0, 3]:
             performSegue(withIdentifier: "SplitViewControllerSegue", sender: nil)
+        case [0, 4]:
+            performSegue(withIdentifier: "PDFKitSegue", sender: nil)
         default:
             break
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DrawingSegue" {
+            if let viewController = segue.destination as? DrawingViewController {
+                viewController.dataModelController = dataModelController
+            }
+        }
+    }
+    
+    func dataModelChanged() {
+        
+    }
+    
 }
 
