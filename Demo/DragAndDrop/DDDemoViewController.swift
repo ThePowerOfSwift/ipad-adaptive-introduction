@@ -13,7 +13,6 @@ import UIKit
 class DDDemoViewController: UIViewController {
 
     @IBOutlet weak var inProgressTableView: UITableView!
-    @IBOutlet weak var completedTableView: UITableView!
     
     private lazy var inProgressDataSource: DDDemoDataSource = {
         let geocaches: [Geo] = [
@@ -29,25 +28,20 @@ class DDDemoViewController: UIViewController {
         return DDDemoDataSource(geoCaches: geocaches)
     }()
     
-    private var completedDataSource = DDDemoDataSource(geoCaches: [])
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        for tableView in [inProgressTableView, completedTableView] {
-            if let tableView = tableView {
-                tableView.dataSource = dataSourceForTableView(tableView)
-                tableView.dragDelegate = self
-                tableView.dropDelegate = self
-            }
-        }
+        inProgressTableView.dragDelegate = self
+        inProgressTableView.dropDelegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        inProgressTableView.dataSource = inProgressDataSource
+        inProgressTableView.reloadData()
     }
 
     func dataSourceForTableView(_ tableView: UITableView) -> DDDemoDataSource {
-        if tableView == inProgressTableView {
-            return inProgressDataSource
-        } else {
-            return completedDataSource
-        }
+        return inProgressDataSource
     }
 
 }
